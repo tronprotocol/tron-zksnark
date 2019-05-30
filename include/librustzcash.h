@@ -30,10 +30,7 @@ extern "C" {
         const char* spend_hash,
         const codeunit* output_path,
         size_t output_path_len,
-        const char* output_hash,
-        const codeunit* sprout_path,
-        size_t sprout_path_len,
-        const char* sprout_hash
+        const char* output_hash
     );
 
     /// Validates the provided Equihash solution against

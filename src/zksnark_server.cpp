@@ -79,10 +79,13 @@ Status TronZksnarkServiceImpl::CheckZksnarkProof(ServerContext *context, const Z
 
     reply->set_code(ZksnarkResponse::SUCCESS);
     ftime(&endAllTime);
-    LOG(ERROR) << "check successfully. txId: " << request->txid()
+    LOG(INFO) << "check successfully. txId: " << request->txid()
     << ", cost: " << cost(startAllTime, endAllTime)
     << ", spend cost:" << cost(spendStartTime, spendEndTime)
     << ", output cost:" << cost(outputStartTime, outputEndTime)
     << ", final cost:" << cost(finalStartTime, finalEndTime);
+
+    LOG(INFO) << "d:" << std::boolalpha << librustzcash_check_diversifier(reinterpret_cast<const unsigned char *>(request->d().c_str()));
+
     return Status::OK;
 }

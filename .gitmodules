@@ -3,4 +3,4 @@
 	url = https://github.com/grpc/grpc.git
 [submodule "third_party/protocol"]
 	path = third_party/protocol
-	url = git@github.com:tronprotocol/protocol.git
+	url = https://github.com/tronprotocol/protocol.git
